@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.SellItemFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itName"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Name"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <EditText
+                    android:id="@+id/itemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"  />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itemDes"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Description"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <EditText
+                    android:id="@+id/itemDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"  />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/itPrice"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:hint="Item Price"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/itemPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/selectImage"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+<!--                <TextView-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:text="Add Image"-->
+<!--                    android:layout_gravity="center_horizontal"/>-->
+
+
+<!--                <ImageView-->
+<!--                    android:layout_width="50dp"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:src="@drawable/sell"  />-->
+
+<!--            </LinearLayout>-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Add Image"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/addImage"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+               android:src="@drawable/sell"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+               android:id="@+id/upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Upload"
+                android:textAllCaps="false"
+                android:layout_gravity="center_horizontal" />
+
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Previously Added Items"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal" />
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:id="@+id/sellRecyclerView"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="horizontal"
+                app:reverseLayout="true"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

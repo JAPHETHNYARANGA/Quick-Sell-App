@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "872646450285",
+    "project_id": "fir-ecommerce-5dbbc",
+    "storage_bucket": "fir-ecommerce-5dbbc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872646450285:android:d877757cfed2ffeff57364",
+        "android_client_info": {
+          "package_name": "com.storesoko.quicksellclassifiedapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872646450285-d73r8nop13s0j1q2eifsvp8oo3cu3djm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB61N4QIj2il1NPlij83RzKE7vvzRlFZ0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872646450285-d73r8nop13s0j1q2eifsvp8oo3cu3djm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872646450285:android:186f6a6fb744be50f57364",
+        "android_client_info": {
+          "package_name": "com.storesoko.quicksellecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872646450285-d73r8nop13s0j1q2eifsvp8oo3cu3djm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB61N4QIj2il1NPlij83RzKE7vvzRlFZ0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872646450285-d73r8nop13s0j1q2eifsvp8oo3cu3djm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
