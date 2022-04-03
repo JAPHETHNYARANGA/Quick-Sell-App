@@ -13,9 +13,4 @@
         android:icon="@drawable/messages"
         android:title="Messages"  />
 
-
-    <item android:id="@+id/profileFragment"
-        android:icon="@drawable/profile"
-        android:title="Profile"  />
-
 </menu>

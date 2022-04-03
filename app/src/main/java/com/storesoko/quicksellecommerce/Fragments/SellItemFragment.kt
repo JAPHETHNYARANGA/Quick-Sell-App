@@ -12,9 +12,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+
 import com.google.firebase.storage.StorageReference
 import com.storesoko.quicksellecommerce.R
 import com.storesoko.quicksellecommerce.adapter.MyAdapter
+
 import com.storesoko.quicksellecommerce.models.user
 import kotlinx.android.synthetic.main.fragment_sell_item.*
 import kotlinx.android.synthetic.main.fragment_sell_item.view.*
@@ -39,22 +41,6 @@ class SellItemFragment : Fragment() {
 
 
 
-//        view.findViewById<View>(R.id.selectImage).setOnClickListener(object : View.OnClickListener {
-//            override fun onClick(v: View?) {
-////                val takePicture = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-////                startActivityForResult(
-////                    takePicture,
-////                    0
-////                ) //zero can be replaced with any action code (called requestCode)
-//                val pickPhoto = Intent(
-//                    Intent.ACTION_PICK,
-//                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI
-//                )
-//                startActivityForResult(pickPhoto, 1) //one can be replaced with any action code
-//
-//
-//            }
-//        })
         userRecyclerView = view.findViewById(R.id.sellRecyclerView)
         userRecyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,true)
         userRecyclerView.setHasFixedSize(true)
@@ -88,6 +74,10 @@ class SellItemFragment : Fragment() {
     }
 
     private fun getUserData() {
+
+        val user1 = FirebaseAuth.getInstance().currentUser
+        val userId = user1!!.uid
+
         databaseReference = FirebaseDatabase.getInstance().getReference("Items")
 
         databaseReference.addValueEventListener(object : ValueEventListener{
@@ -111,6 +101,9 @@ class SellItemFragment : Fragment() {
 
     private fun validation() {
 
+        val user1 = FirebaseAuth.getInstance().currentUser
+        val userId = user1!!.uid
+
         val uid = auth.currentUser?.uid
 
         val itemName = itemName.text.toString().trim()
@@ -128,6 +121,10 @@ class SellItemFragment : Fragment() {
             itName.error = ""
             itemDes.error = ""
             itPrice.error = ""
+
+
+
+
 
             if( uid != null){
                 databaseReference.push().setValue(user).addOnCompleteListener{

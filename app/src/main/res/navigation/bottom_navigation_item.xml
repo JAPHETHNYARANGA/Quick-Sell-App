@@ -15,11 +15,7 @@
         android:name="com.storesoko.quicksellecommerce.Fragments.MessagesFragment"
         android:label="fragment_messages"
         tools:layout="@layout/fragment_messages" />
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.storesoko.quicksellecommerce.Fragments.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+
     <fragment
         android:id="@+id/sellItemFragment"
         android:name="com.storesoko.quicksellecommerce.Fragments.SellItemFragment"
